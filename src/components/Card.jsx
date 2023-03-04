@@ -43,8 +43,13 @@ export default function Card() {
 
   return (
     <div className="w-full h-screen bg-slate-800 flex items-center justify-center ">
-      <div className="formcontainer min-w-[400px] h-screen md:h-1/2 flex flex-col  text-white  items-center justify-center relative">
-        <h1 className="text-4xl ">URL Shortner</h1>
+      <div className="formcontainer min-w-[400px] h-3/4 md:h-1/2 flex flex-col  text-white  items-center justify-center relative">
+        <h1 className="text-6xl flex flex-col items-center gap-1 text-slate-900 font-bold drop-shadow-xl mb-10">
+          Zepto-URL{" "}
+          <span className="text-lg text-slate-500 font-semibold">
+            URL Shortner
+          </span>{" "}
+        </h1>
         <form
           onSubmit={handleSubmit}
           className=" w-full h-1/2 text-white flex flex-col justify-center items-center"
@@ -54,6 +59,7 @@ export default function Card() {
             name="url"
             id="url"
             value={url}
+            placeholder={"Enter a URL"}
             onChange={(event) => setUrl(event.target.value)}
             className="w-11/12 h-8 rounded-sm px-2 text-base text-black mb-4"
           />
